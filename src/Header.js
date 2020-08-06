@@ -9,7 +9,15 @@ import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket';
 import MenuIcon from '@material-ui/icons/Menu';
 
+import { useStateValue } from './StateProvider';
+
+
 function Header() {
+
+    const [{ basket }] = useStateValue();
+
+    console.log(basket);
+    
     return (
         <nav className="header">
             <div className="header__right">
@@ -25,9 +33,9 @@ function Header() {
                 <Link to="/products" className="header__pro">
                     <h4 className="header__title">Products</h4>
                 </Link>
-               
-                <h4 className="header__title">Rooms</h4>
-          
+                <Link to="/rooms" className="header__pro">
+                    <h4 className="header__title">Rooms</h4>
+                </Link>
             <div className="header__search">
                 <input 
                     type="text" 
@@ -66,7 +74,9 @@ function Header() {
                         {/* shopping basket icon*/}
                         <ShoppingBasketIcon/>
                         {/* number of iitems in the basket */}
-                        <span className="header__optionLineTwo header__basektCount">0</span>
+                        <span className="header__optionLineTwo header__basektCount">
+                            {basket?.length}
+                        </span>
                     </div>
                 </Link>
                 

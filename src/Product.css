@@ -9,6 +9,7 @@
     /* margin: 10px; */
     margin-left: 15px;
     z-index: 1;
+    padding: 15px;
 }
 
 .product__info {
@@ -50,4 +51,20 @@
     color: white;
     border: none;
 
+}
+
+@media (max-width:670px) {
+    .product {
+        padding: 0;
+    }
+.product > button {
+    font-size: 12px;
+    font-weight: 700;
+}
+.product > img {
+    width: 100%;
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
 }

@@ -1,4 +1,8 @@
 import React from 'react';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import proData from './proData';
+
 import './Products.css';
 import Product from './Product';
 
@@ -15,7 +19,11 @@ function Products() {
                     inspired by this season's ideas and looks.</p>
             </div>
 
-            {/* Product id, title, price, rating, image */}
+          
+            <div className="products__recommd">
+                <h3 className="products__paraphTitle">Recommended products</h3>
+                <button>See all new products</button>
+            </div>
             <div className="products__row">
                 <Product 
                     id="1212354"
@@ -50,11 +58,11 @@ function Products() {
             </div>
             <div className="products__row">
                 <Product 
-                    id="124587"
-                    title="MISSVEDEN"
-                    price={190}
+                    id="123587"
+                    title="FJÄLLBERGET"
+                    price={169}
                     rating={3}
-                    image="https://www.ikea.com/nl/en/images/products/missveden-mirror__0808671_PE770808_S5.JPG?f=xs"
+                    image="https://www.ikea.com/nl/en/images/products/fjaellberget-conference-chair-with-castors-white-stained-oak-veneer-gunnared-beige__0815078_PE772749_S5.JPG?f=xxs"
                 />
                 
                 <Product 
@@ -79,6 +87,25 @@ function Products() {
                     image="https://www.ikea.com/nl/en/images/products/laettsald-vase-carafe-set-of-2-penguin-black-grey__0891429_PE782282_S5.JPG?f=xxs"
                 />
                 
+            </div>
+
+           
+
+            <div className="products__nowRow">
+                <div className="products__new">
+                    <h3 className="products__paraphTitle">A breath of fresh air for your interior</h3>
+                    <p>Shoo away the stale with new products in fresh tones.</p>
+                </div>
+                
+                <div className="products__gridRoot">
+                    <GridList cellHeight={360} cols={3} >
+                        {proData.map((tile) => (
+                            <GridListTile key={tile.img} cols={tile.cols || 1} className="products__gridTile">
+                                <img src={tile.img} alt={tile.title} className="MuiGridListTile-root products__gridImg" />
+                            </GridListTile>
+                        ))}
+                    </GridList>
+                </div>
             </div>
         </div>
     )
