@@ -15,18 +15,18 @@ function Header() {
             <div className="header__right">
                 <MenuIcon className="header__menu"/>
             </div>
-                <Link to="/login">
+                <Link to="/">
                     <img 
                         className="header__logo" 
                         src="https://www.ikea.com/nl/en/static/ikea-logo.f88b07ceb5a8c356b7a0fdcc9a563d63.svg"
                         alt=""
                     />
                 </Link>
-                
-                <h4 className="header__title">Products</h4>
+                <Link to="/products" className="header__pro">
+                    <h4 className="header__title">Products</h4>
+                </Link>
+               
                 <h4 className="header__title">Rooms</h4>
-           
-            
           
             <div className="header__search">
                 <input 
@@ -35,8 +35,6 @@ function Header() {
                     placeholder="What are you looking for?"    
                 />
                     <SearchIcon className="header__searchIcon" />
-                
-                
                 {/* <CameraAltIcon className="header__cameraIcon" /> */}
                 
             </div>
@@ -49,7 +47,7 @@ function Header() {
                     </div>
                 </Link>
 
-                <Link to="/" className="header__link">
+                <Link to="/login" className="header__link">
                     <div className="header__option">
                         {/* <span>Hello there</span> */}
                         <PersonOutlineIcon/>
@@ -63,15 +61,15 @@ function Header() {
                     </div>
                 </Link>
                 
-                <Link to="/" className="header__link">
-                    <div className="header__option">
-                        {/* <span>Hello there</span> */}
+                <Link to="/checkout" className="header__link">
+                    <div className="header__optionBasket">
+                        {/* shopping basket icon*/}
                         <ShoppingBasketIcon/>
+                        {/* number of iitems in the basket */}
+                        <span className="header__optionLineTwo header__basektCount">0</span>
                     </div>
                 </Link>
-                <div className="header__left">
-                <MenuIcon className="menu__left"/>
-                </div>
+                
                 
                 
             </div>

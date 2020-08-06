@@ -2,6 +2,9 @@
     background-color: white;
     display: flex;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
   
 }
 
@@ -26,8 +29,15 @@
     padding: 12px;
     font-size: 14px;
     color: #111111;
+    text-decoration: none;
+    text-transform: none;
     /* justify-content: space-between; */
 }
+
+.header__pro {
+    text-decoration: none;
+}
+
 .header__searchIcon, 
 .header__cameraIcon {
    
@@ -80,9 +90,24 @@
 .header__link{
     text-decoration: none;
     cursor: pointer;
+    /* display: flex; */
 }
-.header__left {
-    display: none;
+.header__optionLineTwo {
+    font-size: 13px;
+    font-weight: 800;
+}
+.header__optionBasket {
+    display: flex;
+    margin-top: 22px;
+    margin-left: 10px;
+    color: #111111;
+    align-items: center;
+}
+
+.header__basektCount{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
 }
 
 @media (max-width: 1200px) {
@@ -90,14 +115,7 @@
         overflow: hidden;
         display: none !important;
     }
-    .header__left {
-        display: flex;
-        margin-top: 25px;
-      
-    }
-    .menu__left {
-        margin-left: 15px;
-    }
+    
     .header__searchInput {
         width: 100%;
     }
@@ -125,9 +143,7 @@
         margin: 23px;
     
     }
-    .menu__left {
-        margin-right: 20px;
-    }
+  
     .header__logo {
         margin-left: 30px;
         width: 70px;
@@ -151,18 +167,16 @@
     }
     .header__option {
         /* margin-top: 23px; */
-        /* padding-right: 5px; */
-        /* margin: 15px; */
+        padding-right: 0px;
+        margin: 22px;
        
     
     }
-    .menu__left {
-       margin: 0;
-       /* padding-left: 15px; */
-    }
+  
    
     .header__logo {
         margin-left: 30px;
-        width: 65px;
+        width: 60px;
+        margin-top: 10px;
     }
 }
