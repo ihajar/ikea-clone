@@ -19,8 +19,18 @@
     text-align: center;
     align-items: center;
 }
+
+.product__title {
+    font-weight: bold;
+    font-size: 20px;
+}
 .product__price {
     margin-top: 5px;
+    font-size: 18px;
+}
+
+.product__price > small {
+    font-size: 18px;
 }
 .product__rating {
     display: flex;
