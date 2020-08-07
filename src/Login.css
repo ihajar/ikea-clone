@@ -4,6 +4,7 @@
 .login__rightside {
    background-color: #0050A0;
     flex: .3;
+    height: fit-content;
     /* max-height: 100vh; */
 }
 .login__rightHeader {
@@ -62,6 +63,7 @@
 }
 .login__leftside {
     flex: .6;
+    height: fit-content;
    
 }
 .login__leftside > form {
@@ -118,6 +120,11 @@
     .smallFooter {
         display: none;
     }
+    .login__rightside {
+        /* width: 100% auto; */
+        height: fit-content;
+        width: fit-content;
+    }
     .login__rightHeader > img {
         display: none;
     }
@@ -145,12 +152,16 @@
     }
 
     .smallFooter-2 {
-        /* margin: 50px 50px; */
+    
         margin-top: 50px;
         align-items: center;
         font-size: 11px;
         display: flex;
         flex-direction: column;
         color: #858686;
+    }
+    .login__rightArrow {
+        padding: 0px;
+        margin-left: 40px;
     }
 }

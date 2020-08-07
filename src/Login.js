@@ -1,10 +1,36 @@
-import React from 'react';
+import React, {useState} from 'react';
 import ArrowBackIcon from '@material-ui/icons/ArrowBack';
-import VisibilityIcon from '@material-ui/icons/Visibility';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from './firebase';
 import './Login.css';
  
 function Login() {
+    const history = useHistory();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const login = event => {
+        event.preventDefault(); // this gonna stops the refresh
+        // do the login logic
+        auth.signInWithEmailAndPassword(email, password)
+         .then((auth) => {
+            //  here logged in successfully, redirect to homepage
+            history.push("/products");
+         })
+         .catch((e) => alert(e.message));
+    }
+    const register = event => {
+        event.preventDefault(); // this gonna stops the refresh
+        // do the register logic
+        auth.createUserWithEmailAndPassword(email, password)
+         .then(auth => {
+            //  create a user and logged in, redirect to homepage
+            history.push("/");
+         })
+         .catch((e) => alert(e.message));
+    }
+
+
     return (
         <div className="loginpage">
             <div className="login__rightside">
@@ -38,12 +64,12 @@ function Login() {
             </div>
             <div className="login__leftside">
                 <form classNam="login__form">
-                    <input type="" placeholder="Email/mobile number" className="login__input"/>
-                    <input type="text" placeholder="Password" className="login__input"/>
+                    <input value={email} onChange={event => setEmail(event.target.value)} type="email" placeholder="Email/mobile number" className="login__input"/>
+                    <input value={password} onChange={event => setPassword(event.target.value)} type="password" placeholder="Password" className="login__input"/>
                     {/* <VisibilityIcon/> */}
-                    <button className="login__button">Login</button>
+                    <button onClick={login} type="submit" className="login__button">Login</button>
                     <Link to="/signup">
-                        <button className="signup__button">Create account</button>
+                        <button onClick={register} className="signup__button">Create account</button>
                     </Link>
                     
                 </form>

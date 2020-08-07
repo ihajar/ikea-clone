@@ -1,20 +1,5 @@
 export const initialState = {
-    basket: [
-        {
-            id:"123587",
-            title:"FJÄLLBERGET",
-            price:169,
-            rating:3,
-            image:"https://www.ikea.com/nl/en/images/products/fjaellberget-conference-chair-with-castors-white-stained-oak-veneer-gunnared-beige__0815078_PE772749_S5.JPG?f=xxs"
-        },
-        {
-            id:"123587",
-            title:"FJÄLLBERGET",
-            price:169,
-            rating:3,
-            image:"https://www.ikea.com/nl/en/images/products/fjaellberget-conference-chair-with-castors-white-stained-oak-veneer-gunnared-beige__0815078_PE772749_S5.JPG?f=xxs"
-        },
-    ],
+    basket: [],
     user: null,
 };
 
@@ -27,7 +12,13 @@ const reducer = (state, action) => {
     console.log(action);
 
     switch(action.type) {
-        case 'ADD_TO_BASKET':
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user
+            };
+
+        case "ADD_TO_BASKET":
             // logic for adding item to basket
             return { 
                 ...state,
@@ -35,7 +26,7 @@ const reducer = (state, action) => {
             };
 
            
-        case 'REMOVE_FROM_BASKET':
+        case "REMOVE_FROM_BASKET":
             // logic for removing item from basket
             
             // we cloned the basket

@@ -85,7 +85,28 @@
     flex-direction: column;
     color: #111111;
     margin: 25px;
+    /* width: 80px; */
+    flex-direction: column;
 
+}
+.header__optionProfile {
+    display: flex;
+    flex-direction: column;
+    color: #111111;
+    margin-top: 15px;
+    margin-right: 30px; 
+    width: 50px;
+    margin-left: 15px;
+    align-items: center;
+    
+}
+.header__optionProfile > span {
+    font-size: 9px;
+    text-align: center;
+    width: 50px;
+    font-weight: 700;
+    width: fit-content;
+    color: #023766;
 }
 .header__link{
     text-decoration: none;
@@ -95,6 +116,7 @@
 .header__optionLineTwo {
     font-size: 13px;
     font-weight: 800;
+    /* color: red; */
 }
 .header__optionBasket {
     display: flex;

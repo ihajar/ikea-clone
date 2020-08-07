@@ -166,19 +166,24 @@
 }
 
 
-@media (max-width:670px)  {
+@media (max-width: 670px)  {
     .footer {
-      flex-wrap: wrap;
+      /* flex-wrap: wrap; */
+      flex-direction: column;
+      width: 100% auto;
+      object-fit: contain;
+      background-size: cover;
     }
+
     .footer__infoList {
         display: none;
     }
     .footer__top {
-        padding: 50px;
+        padding: 20px;
       
     }
     .footer__info {
-        width: 100%;
+        width: 400px;
        margin:0px 0px;
     
     }
@@ -207,5 +212,8 @@
         padding-left: 0px;
         
         margin-left: 0px;
+    }
+    .footer__infoList > ul  {
+        margin: 0px 0px;
     }
 }

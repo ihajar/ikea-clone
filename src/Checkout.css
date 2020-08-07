@@ -25,6 +25,7 @@
     margin: 0px 150px;
     width: 100%;
     text-align: center;
+    align-items: center;
 }
 .checkout__empty > img {
     width: 150px;

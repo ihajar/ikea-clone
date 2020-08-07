@@ -23,7 +23,7 @@ function Signup() {
                     <img src="https://images.pexels.com/photos/3991265/pexels-photo-3991265.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/>
                     <img src="https://images.pexels.com/photos/3890171/pexels-photo-3890171.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/>
                     <img src="https://images.pexels.com/photos/2875814/pexels-photo-2875814.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/>
-                    <img src="https://www.pexels.com/photo/purple-balloon-against-yellow-background-2534579/" alt=""/>
+                    <img src="https://images.pexels.com/photos/2418645/pexels-photo-2418645.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt=""/>
                     <img src="https://images.pexels.com/photos/3621486/pexels-photo-3621486.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/>
                     <img src="https://images.pexels.com/photos/3764496/pexels-photo-3764496.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""/>
                 </div>
