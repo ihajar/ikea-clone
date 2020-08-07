@@ -1,3 +1,36 @@
 .checkout {
-    margin: 80px 100px
+    margin: 80px 100px;
+    padding: 20px;
+    display: flex;
+    /* background-color: yellow; */
+    height: max-content;
+}
+.checkout__left {
+    flex: .5;
+}
+
+.checkout__title {
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightblue;
+}
+.checkout__right {
+    margin: 50px 150px;
+    flex: .5;
+    /* background-color: lightcoral; */
+    /* width: 500px; */
+}
+
+
+@media (max-width:670px)  {
+    .checkout {
+        flex-direction: column;
+        margin: 80px 20px;
+    }
+    .checkout__right {
+        margin: 10px 20px;
+        /* flex: 1; */
+        width: 100%;
+        /* background-color: lightcoral; */
+    }
 }

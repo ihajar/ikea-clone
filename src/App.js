@@ -6,6 +6,9 @@ import Home from './Home';
 import Products from './Products';
 import Rooms from './Rooms';
 import Checkout from './Checkout';
+import Login from './Login';
+import Signup from './Signup';
+import Footer from './Footer';
 
 
 function App() {
@@ -19,21 +22,27 @@ function App() {
             
           </Route>
           <Route path="/login">
-            <h1>Login page</h1>
+            <Login/>
+          </Route>
+          <Route path="/signup">
+            <Header/>
+            <Signup/>
           </Route>
           <Route path="/products">
             <Header/>
             <Products/>
+            <Footer/>
           </Route>
           <Route path="/rooms">
             <Header/>
             <Rooms />
+            <Footer/>
           </Route>
 
           <Route path="/">
             <Header/>
             <Home />
-           
+            <Footer />
           </Route>
         </Switch>
       </div>

@@ -1,0 +1,22 @@
+.signup {
+    margin: 120px 50px;
+    /* background-color: violet; */
+    /* height: 100vh; */
+}
+
+.signup__rightside {
+    flex: .3;
+}
+
+.signup__lefside {
+    flex: .5;
+}
+
+.signup__heroImages {
+    /* display: flex; */
+   
+}
+.signup__heroImages > img {
+    width: 50%;
+    /* height: 200px; */
+}
