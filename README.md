@@ -1,3 +1,9 @@
+# IKEA Clone React Web Application 🛒
+
+### [Live Demo](https://ikea-clone.web.app/)👈
+
+![IKEA](https://i.ibb.co/Z6qGPmM/IKEA-rooms-chrome-version.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
